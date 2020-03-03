@@ -7,12 +7,12 @@ title: Bar
   <head>
     <meta charset="UTF-8" />
     <title>{{ title | upcase }}</title>
-
+    <link rel="icon" href="/img/favicon.svg" type="image/svg+xml" />
     <style>
       @font-face {
         font-family: monogram;
-        src: url("https://menez.io/css/font/monogram_extended.ttf");
-      }      
+        src: url("/fonts/monogram_extended.ttf");
+      }
       html {
         font-size: 24pt;
         max-width: 600pt;
@@ -27,7 +27,6 @@ title: Bar
           max-width: 100%;
         }
       }
-
       body {
         font-family: monogram, monospace;
         text-rendering: auto;
@@ -40,13 +39,19 @@ title: Bar
         color: black;
       }
 
-      @media (prefers-color-scheme: dark){
+      img.logo {
+        width: 0.75em;
+      }
+      @media (prefers-color-scheme: dark) {
         body {
           background-color: black;
           color: #e6e6e6;
         }
+        img.logo {
+          filter: invert(1);
+        }
       }
-      
+
       h1 {
         font-size: 4rem;
         margin: 0;
@@ -55,10 +60,10 @@ title: Bar
         text-transform: uppercase;
       }
       blockquote {
-          margin: 0;
-          padding: 0 16px 0 10px;
-          border-left-width: 5px;
-          border-left-style: solid;
+        margin: 0;
+        padding: 0 16px 0 10px;
+        border-left-width: 5px;
+        border-left-style: solid;
       }
       h2 {
         font-size: 3rem;
@@ -78,12 +83,15 @@ title: Bar
         list-style-type: none;
         text-transform: lowercase;
       }
-      h1,h2,h3 {
+      h1,
+      h2,
+      h3 {
         font-weight: normal;
       }
     </style>
   </head>
-  <body class="vscode-light">
+  <body>
+    <h1><img class="logo" src="/img/logo.svg" /></h1>
     {{ content | safe }}
   </body>
 </html>

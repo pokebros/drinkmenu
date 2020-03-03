@@ -4,12 +4,12 @@
   <head>
     <meta charset="UTF-8" />
     <title>L</title>
-
+    <link rel="icon" href="/img/favicon.svg" type="image/svg+xml" />
     <style>
       @font-face {
         font-family: monogram;
-        src: url("https://menez.io/css/font/monogram_extended.ttf");
-      }      
+        src: url("/fonts/monogram_extended.ttf");
+      }
       html {
         font-size: 24pt;
         max-width: 600pt;
@@ -24,7 +24,6 @@
           max-width: 100%;
         }
       }
-
       body {
         font-family: monogram, monospace;
         text-rendering: auto;
@@ -37,13 +36,19 @@
         color: black;
       }
 
-      @media (prefers-color-scheme: dark){
+      img.logo {
+        width: 0.75em;
+      }
+      @media (prefers-color-scheme: dark) {
         body {
           background-color: black;
           color: #e6e6e6;
         }
+        img.logo {
+          filter: invert(1);
+        }
       }
-      
+
       h1 {
         font-size: 4rem;
         margin: 0;
@@ -52,10 +57,10 @@
         text-transform: uppercase;
       }
       blockquote {
-          margin: 0;
-          padding: 0 16px 0 10px;
-          border-left-width: 5px;
-          border-left-style: solid;
+        margin: 0;
+        padding: 0 16px 0 10px;
+        border-left-width: 5px;
+        border-left-style: solid;
       }
       h2 {
         font-size: 3rem;
@@ -75,14 +80,16 @@
         list-style-type: none;
         text-transform: lowercase;
       }
-      h1,h2,h3 {
+      h1,
+      h2,
+      h3 {
         font-weight: normal;
       }
     </style>
   </head>
-  <body class="vscode-light">
-    <h1>L</h1>
-<blockquote>
+  <body>
+    <h1><img class="logo" src="/img/logo.svg" /></h1>
+    <blockquote>
 <p>all drinks rotate! feel free to make recommendations for next time! special thanks to the proprietors of Chateau de Gay for hosting! the bar's name is <strong>&quot;L&quot;</strong> Bar. will also accept <strong>&quot;el&quot;</strong> bar cuz funny haha. feel free to request a drink not on the menu if there are ingredients for it. goal is to try new drinks.</p>
 </blockquote>
 <h2>Cocktails</h2>
