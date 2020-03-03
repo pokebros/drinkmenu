@@ -7,11 +7,11 @@ title: Bar
   <head>
     <meta charset="UTF-8" />
     <title>{{ title | upcase }}</title>
-    <link rel="icon" href="/img/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
     <style>
       @font-face {
         font-family: monogram;
-        src: url("/fonts/monogram_extended.ttf");
+        src: url("./fonts/monogram_extended.ttf");
       }
       html {
         font-size: 24pt;
@@ -91,7 +91,7 @@ title: Bar
     </style>
   </head>
   <body>
-    <h1><img class="logo" src="/img/logo.svg" /></h1>
+    <h1><img class="logo" src="./img/logo.svg" /></h1>
     {{ content | safe }}
   </body>
 </html>
