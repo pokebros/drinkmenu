@@ -1,5 +1,5 @@
 ---
-layout: menu.liquid
+layout: menu.html
 title: l
 ---
 # {{ title | upcase}}
