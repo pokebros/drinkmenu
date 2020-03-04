@@ -4,7 +4,12 @@
   <head>
     <meta charset="UTF-8" />
     <title>BAR</title>
-    <link rel="icon" href="./img/favicon.svg" rel="mask-icon" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="./img/favicon.svg"
+      rel="mask-icon"
+      type="image/svg+xml"
+    />
     <style>
       @font-face {
         font-family: monogram;
@@ -38,14 +43,19 @@
       }
 
       img.logo {
-        width: 0.75em;
+        width: 3rem;
       }
+      img.bar {
+        size: 100%;
+      }
+
       @media (prefers-color-scheme: dark) {
         body {
           background-color: black;
           color: #e6e6e6;
         }
-        img.logo {
+        img.logo,
+        img.bar {
           filter: invert(1);
         }
       }
@@ -74,7 +84,7 @@
       h3 {
         font-size: 2rem;
         margin: 0;
-        margin-left: 0.50rem;
+        margin-left: 0.5rem;
         margin-top: 0.5rem;
         text-transform: capitalize;
       }
@@ -92,6 +102,7 @@
   </head>
   <body>
     <h1><img class="logo" src="./img/logo.svg" /></h1>
+    <img class="bar" src="./img/bar.svg" />
     <blockquote>
 <p>all drinks rotate! feel free to make recommendations for next time! special thanks to the proprietors of Chateau de Gay for hosting! the bar's name is <strong>&quot;L&quot;</strong> Bar. will also accept <strong>&quot;el&quot;</strong> bar cuz funny haha. feel free to request a drink not on the menu if there are ingredients for it. goal is to try new drinks.</p>
 </blockquote>
