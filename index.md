@@ -1,5 +1,5 @@
 ---
-layout: menu.html
+layout: menu
 ---
 
 > all drinks rotate! feel free to make recommendations for next time! special thanks to the proprietors of Chateau de Gay for hosting! the bar's name is __"L"__ Bar. will also accept __"el"__ bar cuz funny haha. feel free to request a drink not on the menu if there are ingredients for it. goal is to try new drinks.

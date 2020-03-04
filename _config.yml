@@ -1,3 +1,1 @@
-layouts_dir         : _includes
-destination         : ./docs
-include             : ["fonts","img"]
+exclude: ["LICENSE"]

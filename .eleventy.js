@@ -1,10 +1,10 @@
 module.exports = function(eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("img");
-    eleventyConfig.addPassthroughCopy("fonts");
+    eleventyConfig.addPassthroughCopy("images");
+    eleventyConfig.addPassthroughCopy("css");
     return {
         dir: {
-            input: ".",
-            output: "docs"
+            output: "docs_11",
+            layouts: "_layouts"
         }
     };
   };
