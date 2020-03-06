@@ -1,11 +1,12 @@
 ---
 title: Bar
+quote: all drinks rotate! feel free to make recommendations for next time! special thanks to the proprietors of Chateau de Gay for hosting! the bar's name is __"L"__ Bar. will also accept __"el"__ bar cuz funny haha. feel free to request a drink not on the menu if there are ingredients for it. goal is to try new drinks.
 ---
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>{{ title | upcase }}</title>
+    <title>{{ page.title | upcase }}</title>
     <link
       rel="icon"
       href="./images/favicon.svg"
@@ -15,6 +16,10 @@ title: Bar
     <style>
       @font-face {
         font-family: monogram;
+        src: url("./css/monogram.ttf");
+      }
+      @font-face {
+        font-family: monogram_extended;
         src: url("./css/monogram_extended.ttf");
       }
       html {
@@ -32,7 +37,8 @@ title: Bar
         }
       }
       body {
-        font-family: monogram, monospace;
+        font-family: monogram, monogram_extended, monospace;
+        font-weight: normal;
         text-rendering: auto;
         font-size: 1rem;
         line-height: 1;
@@ -70,12 +76,14 @@ title: Bar
         padding: 0;
         text-transform: uppercase;
       }
-      blockquote {
+
+      blockquote p {
         margin: 0;
         padding: 0 16px 0 10px;
         border-left-width: 5px;
         border-left-style: solid;
       }
+      
       h2 {
         font-size: 3rem;
         margin: 0;
@@ -106,6 +114,7 @@ title: Bar
   <body>
     <h1><img class="logo" src="./images/logo.svg" /></h1>
     <img class="bar" src="./images/bar.svg" />
+    <blockquote><p>{{ page.quote | markdownify }}</p></blockquote>
     {{ content | safe }}
   </body>
 </html>

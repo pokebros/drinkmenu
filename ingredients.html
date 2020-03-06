@@ -1,0 +1,10 @@
+---
+layout: menu
+quote: ingredients
+title: ingredients
+---
+{% assign all_ingredients = "" | split: "" %}
+{% for drink in site.drinks %}
+{% assign all_ingredients = all_ingredients | concat:drink.ingredients %}
+{% endfor %}
+{{ all_ingredients | sort | uniq | downcase}}

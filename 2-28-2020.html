@@ -1,0 +1,17 @@
+---
+layout: menu
+quote: 2-28-2020
+title: 2-28-2020
+---
+{% assign drinks_by_type = site.drinks | group_by: "type" %}
+{% for drink_type in drinks_by_type %}
+    <h2>{{ drink_type.name }}</h2>
+    {% for drink_item in drink_type.items %}
+        <h3>{{ drink_item.title }}</h3>
+        <ul>
+            {% for ingredients in drink_item.ingredients %}               
+            <li>{{ingredients}}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+{% endfor %}
