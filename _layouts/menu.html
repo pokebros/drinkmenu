@@ -5,7 +5,7 @@ title: Bar
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>{{ title | upcase }}</title>
+    <title>{{ page.title | upcase }}</title>
     <link
       rel="icon"
       href="./images/favicon.svg"
@@ -15,6 +15,10 @@ title: Bar
     <style>
       @font-face {
         font-family: monogram;
+        src: url("./css/monogram.ttf");
+      }
+      @font-face {
+        font-family: monogram_extended;
         src: url("./css/monogram_extended.ttf");
       }
       html {
@@ -32,7 +36,8 @@ title: Bar
         }
       }
       body {
-        font-family: monogram, monospace;
+        font-family: monogram, monogram_extended, monospace;
+        font-weight: normal;
         text-rendering: auto;
         font-size: 1rem;
         line-height: 1;
@@ -70,12 +75,14 @@ title: Bar
         padding: 0;
         text-transform: uppercase;
       }
-      blockquote {
+
+      blockquote p {
         margin: 0;
         padding: 0 16px 0 10px;
         border-left-width: 5px;
         border-left-style: solid;
       }
+      
       h2 {
         font-size: 3rem;
         margin: 0;
